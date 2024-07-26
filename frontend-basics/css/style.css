@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  border-top: 5px goldenrod solid;
+  width: 600px;
+  margin: 0 auto;
+  border-bottom: 5px goldenrod solid;
+  position: relative;
+}
+
+header > nav > ul {
+  list-style: none;
+}
+
+header li {
+  display: inline-block;
+  padding: 12px;
+  margin: 12px 24px;
+  transition: 0.3s all ease;
+}
+header li:hover {
+  background-color: goldenrod;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+article {
+  margin: 16px;
+  padding: 24px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+article:last-child {
+  margin-bottom: 36px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside h2 {
+  font-size: 0.9rem;
+  background-color: goldenrod;
+  margin-bottom: 18px;
+  padding: 12px 24px;
+  color: #fff;
+}
+
+aside li {
+  display: flex;
+  gap: 16px;
+  /* margin-bottom: 16px; */
+  padding: 16px;
+}
+
+aside li:hover {
+  background-color: rgb(237, 222, 187);
+}
+
+aside img {
+  border-radius: 50%;
+}
+
+h1 {
+  text-align: center;
+}
+
+[href*="http"] {
+  text-decoration: none;
+}
+
+#footer {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+#btn-like {
+  position: absolute;
+  padding: 18px 36px;
+  border: none;
+  color: rgb(110, 8, 8);
+  font-size: 1.5rem;
+  bottom: 20px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+#btn-like:hover {
+  cursor: pointer;
+  background-color: rgb(236, 188, 188);
+}

@@ -4,65 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My First Page</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- header -->
-    <header>
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Pricing</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <!-- sidebar -->
-    <aside>
-      <h2>Related Links</h2>
-      <ul>
-        <li><a href="">RelatedLink 01</a></li>
-        <li><a href="">RelatedLink 02</a></li>
-        <li><a href="">RelatedLink 03</a></li>
-        <li><a href="">RelatedLink 04</a></li>
-        <li><a href="">RelatedLink 05</a></li>
-      </ul>
-    </aside>
+      <div class="main-section">
+        <!-- sidebar -->
+        <aside>
+          <h2>Related Links</h2>
+          <ul>
+            <li>
+              <img src="https://picsum.photos/30" alt="Random inage" />
+              <a href="http://www.google.com">Link 01</a>
+            </li>
+            <li>
+              <img src="https://picsum.photos/30" alt="Random inage" />
+              <a href="https://www.yahoo.com">Link 02</a>
+            </li>
+            <li>
+              <img src="https://picsum.photos/30" alt="Random inage" />
+              <a href="http://www.msn.com">Link 03</a>
+            </li>
+            <li>
+              <img src="https://picsum.photos/30" alt="Random inage" />
+              <a href="https://www.rediff.com">Link 04</a>
+            </li>
+          </ul>
+        </aside>
 
-    <!-- main -->
-    <main>
-      <section>
-        <h1>The Blog App</h1>
-      </section>
-      <section>
-        <article>
-          <blockquote>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            dicta nulla corrupti voluptate sed velit minima neque est adipisci
-            <cite>- Tenetur</cite>
-          </blockquote>
-        </article>
-        <article>
-          <blockquote>
-            Consectetur adipisicing elit. Consequatur dicta nulla voluptate sed
-            velit minima neque est adipisci
-            <cite>- Corrupti</cite>
-          </blockquote>
-        </article>
-        <article>
-          <blockquote>
-            Adipisicing elit. Consequatur dicta nulla corrupti sed velit minima
-            neque est adipisci
-            <cite>- Voluptate</cite>
-          </blockquote>
-        </article>
-      </section>
-    </main>
+        <!-- main -->
+        <main>
+          <section>
+            <h1>The Blog App</h1>
+          </section>
+          <section>
+            <article>
+              <blockquote>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dicta nulla corrupti voluptate sed velit minima
+                neque est adipisci
+                <cite>- Tenetur</cite>
+              </blockquote>
+            </article>
+            <article>
+              <blockquote>
+                Consectetur adipisicing elit. Consequatur dicta nulla voluptate
+                sed velit minima neque est adipisci
+                <cite>- Corrupti</cite>
+              </blockquote>
+            </article>
+            <article>
+              <blockquote>
+                Adipisicing elit. Consequatur dicta nulla corrupti sed velit
+                minima neque est adipisci
+                <cite>- Voluptate</cite>
+              </blockquote>
+            </article>
+          </section>
+        </main>
+      </div>
 
-    <!-- footer -->
-    <footer>
-      <p>&copy; DB Training 2024</p>
-    </footer>
+      <button id="btn-like">Like ❤️</button>
+
+      <!-- footer -->
+      <footer id="footer">
+        <p>&copy; DB Training 2024</p>
+      </footer>
+    </div>
   </body>
 </html>
