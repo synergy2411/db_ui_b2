@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input {
+  padding: 12px;
+  width: 300px;
+}
+input:hover {
+  box-shadow: 0 3px 15px rgba(rgb(230, 125, 125), 0, 0, 0.5);
+}
+
+button {
+  border: none;
+  padding: 12px 24px;
+  display: inline-block;
+  margin: 0 12px;
+  color: #fff;
+  background-color: goldenrod;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(192, 140, 9);
+  cursor: pointer;
+}
