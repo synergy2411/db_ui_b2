@@ -141,6 +141,7 @@ cite {
   font-weight: 600;
 }
 
+/* Desktop-First Approach */
 @media screen and (max-width: 1400px) {
   .container {
     background-color: rgb(231, 199, 247);
@@ -194,4 +195,17 @@ cite {
   html {
     font-size: 62.5%;
   }
+}
+
+/* Mobile-First Approach */
+@media screen and (min-width: 550px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1400px) {
 }
