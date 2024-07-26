@@ -16,6 +16,11 @@ window.onload = function () {
     let liElement = document.createElement("li");
     liElement.innerText = inputValue;
     liElement.classList.add("list-item");
+    liElement.onclick = deleteElement;
     listContainer.appendChild(liElement);
+  }
+
+  function deleteElement() {
+    this.remove();
   }
 };
