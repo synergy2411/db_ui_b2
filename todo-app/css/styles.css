@@ -11,8 +11,9 @@ input {
   padding: 12px;
   width: 300px;
 }
-input:hover {
-  box-shadow: 0 3px 15px rgba(rgb(230, 125, 125), 0, 0, 0.5);
+input:focus {
+  box-shadow: 0 5px 35px rgb(228, 227, 227);
+  outline-width: 0;
 }
 
 button {
@@ -28,5 +29,19 @@ button {
 
 button:hover {
   background-color: rgb(192, 140, 9);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.list-item {
+  padding: 16px;
+  border: 1px #222 solid;
+  margin-bottom: 16px;
+}
+.list-item:hover {
+  background-color: rgb(238, 228, 167);
   cursor: pointer;
 }
