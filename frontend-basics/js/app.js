@@ -62,8 +62,8 @@
 
 // console.log(arr[1]);
 
-let marks = [99, 95, 92, 86, 71, 83];
-console.log(marks);
+// let marks = [99, 95, 92, 86, 71, 83];
+// console.log(marks);
 // marks.push(99);
 // marks.unshift("99");
 // marks.pop();
@@ -94,8 +94,66 @@ console.log(marks);
 
 // console.log(position);
 
-let mark = marks.find(function (mark) {
-  return mark < 80;
-});
+// let mark = marks.find(function (mark) {
+//   return mark < 80;
+// });
 
-console.log(mark);
+// console.log(mark);
+
+// Function declaration
+// demoFn();
+
+// function demoFn() {
+//   console.log("Demo function called");
+// }
+
+// Function Expression
+
+// let add = function (n1, n2) {
+//   return n1 + n2;
+// };
+
+// console.log(add(3, 5)); // ?
+
+// FIRST CLASS CITIZENS
+
+// function test() {
+//   return function () {
+//     return 12;
+//   };
+// }
+
+// console.log(test()); // ?
+
+// let nestedFn = test();
+
+// console.log(nestedFn());
+// --------
+
+// function greet() {
+//   console.log("Hello there!");
+// }
+
+// function demo(cb) {
+//   cb();
+// }
+
+// demo(greet);
+
+function printFilteredValues(filteredValues) {
+  console.log(filteredValues);
+}
+
+function doSomething(arr, cb) {
+  let filteredValues = arr.filter(function (element) {
+    return element > 90;
+  });
+  cb(filteredValues);
+}
+
+doSomething([99, 85, 79, 96], printFilteredValues);
+
+// CALLBACK - function supplied as argument
+// HigherOrderFunction (HoF) -
+// - return the function
+// - receive the function as argument
