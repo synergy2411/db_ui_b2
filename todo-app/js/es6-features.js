@@ -152,9 +152,50 @@
 // -------
 // DEFAULT PARAMETER
 
-function demoFn(arr = []) {
-  return arr.length;
+// function demoFn(arr = []) {
+//   return arr.length;
+// }
+
+// console.log(demoFn());
+// console.log(demoFn([2, 3, 4, 5]));
+
+// --------
+// PROMISE : placeholder for future value
+// Promise States
+// - Pending
+// - Settled (Resolve, Reject)
+
+// - Producer Code
+
+function promiseProducer() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // resolve({ message: "Success" });
+      reject(new Error("Something went wrong"));
+    }, 2000);
+  });
 }
 
-console.log(demoFn());
-console.log(demoFn([2, 3, 4, 5]));
+// - Consumer Code
+// > Async...await
+async function consumePromise() {
+  try {
+    let response = await promiseProducer();
+    console.log("ASYNC RESPONSE : ", response);
+  } catch (err) {
+    console.error(err);
+  }
+}
+consumePromise();
+
+// > .then().catch()
+// function consumePromise() {
+//   console.log("Start");
+//   promiseProducer()
+//     .then((response) => console.log("RESPONSE : ", response))
+//     .catch((err) => console.log(err));
+
+//   console.log("End");
+// }
+
+// consumePromise();
