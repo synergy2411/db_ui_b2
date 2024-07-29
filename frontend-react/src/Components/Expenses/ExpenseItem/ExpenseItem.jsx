@@ -1,4 +1,11 @@
+import { useContext } from "react";
+import ThemeContext from "../../../context/theme-context";
+
 function ExpenseItem({ expense }) {
+  const themeContext = useContext(ThemeContext);
+
+  console.log("Context Value : ", themeContext);
+
   return (
     <div className="col-4">
       <div className="card">

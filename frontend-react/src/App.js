@@ -1,5 +1,5 @@
 import Expenses from "./Components/Expenses/Expenses";
-import UseEffectDemo from "./Components/Playground/UseEffectDemo";
+import ThemeContext from "./context/theme-context";
 
 function App() {
   return (
@@ -7,9 +7,11 @@ function App() {
       <h1>My First React App</h1>
 
       {/* <ClassBased /> */}
-      <UseEffectDemo />
+      {/* <UseEffectDemo /> */}
 
-      <Expenses />
+      <ThemeContext.Provider value={{ theme: "dark" }}>
+        <Expenses />
+      </ThemeContext.Provider>
     </div>
   );
 }

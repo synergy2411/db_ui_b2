@@ -48,3 +48,16 @@
 - json-server --version
 - create db.json file
 - json-server --watch db.json --port=3030 (from Data folder)
+
+# Hooks to watch out - (react.dev)
+
+- useCallback
+- useMemo
+- useTransition
+- useDeferredValue
+- useReducer
+
+- useState
+- useEffect
+- useRef
+- useContext
