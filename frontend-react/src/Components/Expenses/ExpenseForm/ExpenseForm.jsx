@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import classes from "./ExpenseForm.module.css";
 
-function ExpenseForm() {
-  const [enteredTitle, setEnteredTitle] = useState("Hello");
+function ExpenseForm({ onAddNewExpense }) {
+  const inputCreatedAtRef = useRef();
 
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState(0);
+
+  const amountChangeHandler = (e) => setEnteredAmount(e.target.value);
   const titleChangeHandler = (event) => setEnteredTitle(event.target.value);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    onAddNewExpense(
+      enteredTitle,
+      enteredAmount,
+      inputCreatedAtRef.current.value
+    );
+  };
 
   return (
     <div className={classes["backdrop"]}>
@@ -12,7 +25,7 @@ function ExpenseForm() {
         <div className="card">
           <div className="card-body">
             <h2 className="text-center">Add Expense Form</h2>
-            <form>
+            <form onSubmit={submitHandler}>
               {/* title */}
               <div className="form-floating mb-3">
                 <input
@@ -26,7 +39,6 @@ function ExpenseForm() {
                 />
                 <label htmlFor="title">Title:</label>
               </div>
-              <p>Entered Title : {enteredTitle}</p>
 
               {/* amount */}
               <div className="form-floating mb-3">
@@ -36,9 +48,12 @@ function ExpenseForm() {
                   name="amount"
                   id="amount"
                   placeholder=""
+                  value={enteredAmount}
+                  onChange={amountChangeHandler}
                 />
                 <label htmlFor="amount">Amount:</label>
               </div>
+
               {/* createdAt */}
               <div className="form-floating mb-3">
                 <input
@@ -47,6 +62,7 @@ function ExpenseForm() {
                   name="created-at"
                   id="created-at"
                   placeholder=""
+                  ref={inputCreatedAtRef}
                 />
                 <label htmlFor="created-at">Created At:</label>
               </div>
@@ -54,7 +70,9 @@ function ExpenseForm() {
               <div className="row">
                 <div className="col-6">
                   <div className="d-grid">
-                    <button className="btn btn-primary">Add</button>
+                    <button className="btn btn-primary" type="submit">
+                      Add
+                    </button>
                   </div>
                 </div>
                 <div className="col-6">
