@@ -7,7 +7,7 @@ function ExpenseItem({ expense }) {
         </div>
         <div className="card-body">
           <p>Amount : ${expense.amount}</p>
-          <p>Created At : {expense.createdAt.toISOString()}</p>
+          <p>Created At : {expense.createdAt}</p>
         </div>
       </div>
     </div>

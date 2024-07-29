@@ -13,3 +13,38 @@
 
 - cd frontend-react
 - npm start
+
+# To install Bootstrap
+
+- npm install bootstrap
+
+# Purpose of React Library
+
+- to render the UI quickly and efficiently
+
+# Side-effect
+
+- XHR Call
+- State Management
+- Route Transitioning
+
+# useEffect Flavors -
+
+- useEffect(cb, [])
+  > CB will execute only one time
+- useEffect(cb, [Dependencies])
+  > CB will execute at initial rendering of component
+  > CB will execute everytime whenever the mentioned dependncy will change
+- useEffect(cb => cleanUpFn, [Dependencies])
+  > cb will execute at initial rendering of component
+  > Dependencies' value will change
+  > cleanUpFn will execute
+  > cb will execute
+  > cleanUpFn will also execute just before the component unload
+
+# To install JSON Server
+
+- npm install -g json-server@0.17.4
+- json-server --version
+- create db.json file
+- json-server --watch db.json --port=3030 (from Data folder)

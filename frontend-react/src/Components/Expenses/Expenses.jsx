@@ -1,46 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ExpenseForm from "./ExpenseForm/ExpenseForm";
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
 
-let INITIAL_EXPENSES = [
-  {
-    id: "e001",
-    title: "shopping",
-    amount: 199,
-    createdAt: new Date("Jun 20, 2024"),
-  },
-  {
-    id: "e002",
-    title: "planting",
-    amount: 69,
-    createdAt: new Date("Sept 2, 2023"),
-  },
-  {
-    id: "e003",
-    title: "insurance",
-    amount: 149,
-    createdAt: new Date("Feb 18, 2024"),
-  },
-];
-
 function Expenses() {
-  const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
-
+  const [expenses, setExpenses] = useState([]);
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const fetchExpenses = async () => {
+      const response = await fetch("http://localhost:3030/expenses");
+      const expenses = await response.json();
+      setExpenses(expenses);
+    };
+    fetchExpenses();
+  }, []);
 
   const showClickHandler = () => {
     setShow(!show);
     //   show = !show;     // NEVER EVER CHANGE STATE MUTABLY
   };
 
-  const onAddNewExpense = (title, amount, createdAt) => {
+  const onAddNewExpense = async (title, amount, createdAt) => {
     let newExpense = {
-      id: "e00" + (expenses.length + 1),
       title,
       amount: Number(amount),
-      createdAt: new Date(createdAt),
+      createdAt: createdAt,
     };
-    setExpenses((prevExpenses) => [newExpense, ...prevExpenses]);
+    const response = await fetch("http://localhost:3030/expenses", {
+      method: "POST",
+      body: JSON.stringify(newExpense),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const result = await response.json();
+    setExpenses((prevExpenses) => [result, ...prevExpenses]);
     setShow(false);
   };
 
