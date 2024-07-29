@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
+import ExpenseForm from "./ExpenseForm/ExpenseForm";
 
 function Expenses() {
   let expenses = [
@@ -25,10 +26,9 @@ function Expenses() {
 
   const [show, setShow] = useState(false);
 
-  //   let show = false;
-
   const showClickHandler = () => {
     setShow(!show);
+    //   show = !show;     // NEVER EVER CHANGE STATE MUTABLY
   };
 
   return (
@@ -39,13 +39,13 @@ function Expenses() {
         <div className="col-4 offset-4">
           <div className="d-grid">
             <button className="btn btn-primary" onClick={showClickHandler}>
-              Show
+              {show ? "Hide" : "Show"}
             </button>
           </div>
         </div>
       </div>
 
-      {show && <p>This paragraph will dynamically appear</p>}
+      {show && <ExpenseForm />}
 
       <div className="row">
         {expenses.map((exp) => (
