@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
 
 function Expenses() {
@@ -22,13 +23,34 @@ function Expenses() {
     },
   ];
 
+  const [show, setShow] = useState(false);
+
+  //   let show = false;
+
+  const showClickHandler = () => {
+    setShow(!show);
+  };
+
   return (
     <div>
-      <h2>Expenses coming soon...</h2>
+      <h2 className="text-center display-4 mb-4">My Expenses</h2>
+
+      <div className="row mb-4">
+        <div className="col-4 offset-4">
+          <div className="d-grid">
+            <button className="btn btn-primary" onClick={showClickHandler}>
+              Show
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {show && <p>This paragraph will dynamically appear</p>}
+
       <div className="row">
-        <ExpenseItem expense={expenses[0]} />
-        <ExpenseItem expense={expenses[1]} />
-        <ExpenseItem expense={expenses[2]} />
+        {expenses.map((exp) => (
+          <ExpenseItem expense={exp} key={exp.id} />
+        ))}
       </div>
     </div>
   );
