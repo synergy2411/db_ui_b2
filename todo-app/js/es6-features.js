@@ -167,26 +167,26 @@
 
 // - Producer Code
 
-function promiseProducer() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      // resolve({ message: "Success" });
-      reject(new Error("Something went wrong"));
-    }, 2000);
-  });
-}
+// function promiseProducer() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       // resolve({ message: "Success" });
+//       reject(new Error("Something went wrong"));
+//     }, 2000);
+//   });
+// }
 
 // - Consumer Code
 // > Async...await
-async function consumePromise() {
-  try {
-    let response = await promiseProducer();
-    console.log("ASYNC RESPONSE : ", response);
-  } catch (err) {
-    console.error(err);
-  }
-}
-consumePromise();
+// async function consumePromise() {
+//   try {
+//     let response = await promiseProducer();
+//     console.log("ASYNC RESPONSE : ", response);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+// consumePromise();
 
 // > .then().catch()
 // function consumePromise() {
@@ -199,3 +199,23 @@ consumePromise();
 // }
 
 // consumePromise();
+
+// GET CALL
+// async function fetchTodos() {
+//   let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+//   let result = await response.json();
+//   console.log("RESULT : ", result);
+// }
+
+// fetchTodos();
+
+// POST CALL SYNTAX
+// fetch("", {
+//   method: "POST",
+//   body: {},
+//   headers: {
+//     "Content-Type": "application/json",
+//     "Authorization" : "Bearer token"
+//   },
+
+// })
