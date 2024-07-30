@@ -39,15 +39,15 @@ test("renders 'Toggle is true' when button is clicked", async () => {
   expect(paragraphEl).not.toBeNull();
 });
 
-test.skip("renders not 'Toggle is false' when the button is clicked", async () => {
-  render(<DemoOutput />);
+// test.skip("renders not 'Toggle is false' when the button is clicked", async () => {
+//   render(<DemoOutput />);
 
-  const buttonEl = screen.getByRole("button");
+//   const buttonEl = screen.getByRole("button");
 
-  fireEvent.click(buttonEl);
+//   fireEvent.click(buttonEl);
 
-  await screen.findByText(/Toggle is false/i);
-});
+//   await screen.findByText(/Toggle is false/i);
+// });
 
 test("renders 200 todo items from REST API Call", async () => {
   render(<DemoOutput />);
