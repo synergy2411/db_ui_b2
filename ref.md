@@ -30,17 +30,17 @@
 
 # useEffect Flavors -
 
-- useEffect(cb, [])
+- useEffect(cb, []) - componentDidMount
   > CB will execute only one time
-- useEffect(cb, [Dependencies])
+- useEffect(cb, [Dependencies]) - componentDidUpdate
   > CB will execute at initial rendering of component
-  > CB will execute everytime whenever the mentioned dependncy will change
+  > CB will execute everytime whenever the mentioned dependency will change
 - useEffect(cb => cleanUpFn, [Dependencies])
   > cb will execute at initial rendering of component
   > Dependencies' value will change
   > cleanUpFn will execute
   > cb will execute
-  > cleanUpFn will also execute just before the component unload
+  > cleanUpFn will also execute just before the component unload - componentWillUnmount
 
 # To install JSON Server
 
@@ -61,3 +61,28 @@
 - useEffect
 - useRef
 - useContext
+
+---
+
+# Redux
+
+# Testing
+
+# Primereact
+
+# Ag-grid
+
+# Debugging
+
+# Authentication / Authorization /
+
+# CSRF / XSRF
+
+---
+
+# To install Redux Toolkit -
+
+- npx create-react-app react-redux-app
+- cd react-redux-app
+- npm install @reduxjs/toolkit react-redux
+- npm install bootstrap
