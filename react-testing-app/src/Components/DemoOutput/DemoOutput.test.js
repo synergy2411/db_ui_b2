@@ -3,56 +3,64 @@ import userEvent from "@testing-library/user-event";
 
 import DemoOutput from "./DemoOutput";
 
-test("renders heading element on UI", () => {
-  render(<DemoOutput />);
-  const headingEl = screen.getByText("the Demo Output Component", {
-    exact: false,
+describe("DemoOutput Component", () => {
+  // Setup and Tear down
+  beforeAll(() => {});
+  afterAll(() => {});
+  beforeEach(() => {});
+  afterEach(() => {});
+
+  test("renders heading element on UI", () => {
+    render(<DemoOutput />);
+    const headingEl = screen.getByText("the Demo Output Component", {
+      exact: false,
+    });
+    expect(headingEl).toBeInTheDocument();
   });
-  expect(headingEl).toBeInTheDocument();
-});
 
-test("renders paragraph element on UI", () => {
-  render(<DemoOutput />);
+  test("renders paragraph element on UI", () => {
+    render(<DemoOutput />);
 
-  const paragraphEl = screen.queryByText(/Some cool contents/i);
+    const paragraphEl = screen.queryByText(/Some cool contents/i);
 
-  expect(paragraphEl).not.toBeNull();
-});
+    expect(paragraphEl).not.toBeNull();
+  });
 
-test("renders 'Toggle is false' when the button is not clicked", () => {
-  render(<DemoOutput />);
+  test("renders 'Toggle is false' when the button is not clicked", () => {
+    render(<DemoOutput />);
 
-  const paragraphEl = screen.getByText(/Toggle is false/i);
+    const paragraphEl = screen.getByText(/Toggle is false/i);
 
-  expect(paragraphEl).toBeInTheDocument();
-});
+    expect(paragraphEl).toBeInTheDocument();
+  });
 
-test("renders 'Toggle is true' when button is clicked", async () => {
-  render(<DemoOutput />);
+  test("renders 'Toggle is true' when button is clicked", async () => {
+    render(<DemoOutput />);
 
-  const btnEl = screen.getByRole("button");
+    const btnEl = screen.getByRole("button");
 
-  userEvent.click(btnEl);
+    userEvent.click(btnEl);
 
-  const paragraphEl = await screen.findByText(/Toggle is true/i);
+    const paragraphEl = await screen.findByText(/Toggle is true/i);
 
-  expect(paragraphEl).not.toBeNull();
-});
+    expect(paragraphEl).not.toBeNull();
+  });
 
-// test.skip("renders not 'Toggle is false' when the button is clicked", async () => {
-//   render(<DemoOutput />);
+  // test.skip("renders not 'Toggle is false' when the button is clicked", async () => {
+  //   render(<DemoOutput />);
 
-//   const buttonEl = screen.getByRole("button");
+  //   const buttonEl = screen.getByRole("button");
 
-//   fireEvent.click(buttonEl);
+  //   fireEvent.click(buttonEl);
 
-//   await screen.findByText(/Toggle is false/i);
-// });
+  //   await screen.findByText(/Toggle is false/i);
+  // });
 
-test("renders 200 todo items from REST API Call", async () => {
-  render(<DemoOutput />);
+  test("renders 200 todo items from REST API Call", async () => {
+    render(<DemoOutput />);
 
-  const listItems = await screen.findAllByRole("listitem");
+    const listItems = await screen.findAllByRole("listitem");
 
-  expect(listItems.length).toEqual(200);
+    expect(listItems.length).toEqual(200);
+  });
 });

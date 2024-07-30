@@ -86,3 +86,22 @@
 - cd react-redux-app
 - npm install @reduxjs/toolkit react-redux
 - npm install bootstrap
+
+---
+
+# Code Optimization
+
+- React.memo()
+- useCallback()
+- useMemo()
+- PureComponent (Class based components)
+- keys props when iterating the collection
+- useTransition()
+- useDeferredValue()
+- React.lazy() - SPA
+
+# Authentication / Authorization
+
+# CSRF / XSRF : Cross Site Request Fogery
+
+- JWT -> JSON Web Token
