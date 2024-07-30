@@ -221,7 +221,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rgnj53pM8v7CSaITdPww" name="Page-4">
-    <mxGraphModel dx="697" dy="403" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1524" dy="403" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -234,7 +234,10 @@
         <mxCell id="SeHSAZthsXECyLRZh4Gh-2" value="&lt;b&gt;View&lt;/b&gt; / React / Angular/ Vue / JavaScript" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="200" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="SeHSAZthsXECyLRZh4Gh-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SeHSAZthsXECyLRZh4Gh-3" target="SeHSAZthsXECyLRZh4Gh-7">
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=1 2;strokeWidth=2;" edge="1" parent="1" source="SeHSAZthsXECyLRZh4Gh-3" target="SeHSAZthsXECyLRZh4Gh-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SeHSAZthsXECyLRZh4Gh-3" target="SeHSAZthsXECyLRZh4Gh-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="SeHSAZthsXECyLRZh4Gh-3" value="Action" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
@@ -244,7 +247,7 @@
           <mxGeometry x="170" y="278" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SeHSAZthsXECyLRZh4Gh-6" value="{ type: &quot;&quot;, payload? : &quot;&quot; }" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="100" y="400" width="150" height="30" as="geometry" />
+          <mxGeometry x="-30" y="355" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SeHSAZthsXECyLRZh4Gh-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SeHSAZthsXECyLRZh4Gh-7" target="SeHSAZthsXECyLRZh4Gh-10">
           <mxGeometry relative="1" as="geometry" />
@@ -253,7 +256,7 @@
           <mxGeometry x="430" y="340" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="SeHSAZthsXECyLRZh4Gh-9" value="(state, action) =&amp;gt; newState" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="395" y="398" width="170" height="30" as="geometry" />
+          <mxGeometry x="540" y="355" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SeHSAZthsXECyLRZh4Gh-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="SeHSAZthsXECyLRZh4Gh-10" target="SeHSAZthsXECyLRZh4Gh-2">
           <mxGeometry relative="1" as="geometry" />
@@ -263,6 +266,21 @@
         </mxCell>
         <mxCell id="SeHSAZthsXECyLRZh4Gh-13" value="subscribe()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="290" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="SeHSAZthsXECyLRZh4Gh-14" target="SeHSAZthsXECyLRZh4Gh-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-14" value="Middleware" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-17" value="Sync flow" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="285" y="338" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-18" value="Async Activity" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="540" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SeHSAZthsXECyLRZh4Gh-19" value="&lt;b&gt;Thunk Middleware&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="265" y="560" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

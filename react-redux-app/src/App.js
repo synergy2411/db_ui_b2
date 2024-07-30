@@ -1,9 +1,10 @@
-import Counter from "./Components/Counter/Counter";
+import Expenses from "./Components/Expenses/Expenses";
 
 function App() {
   return (
     <>
-      <Counter />
+      {/* <Counter /> */}
+      <Expenses />
     </>
   );
 }
