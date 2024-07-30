@@ -19,7 +19,7 @@ function Expenses() {
       {error.trim() !== "" && <h1>{error}</h1>}
       <ul className="list-group">
         {expenses.map((exp) => (
-          <li>{exp.title.toUpperCase()}</li>
+          <li key={exp.id}>{exp.title.toUpperCase()}</li>
         ))}
       </ul>
     </div>

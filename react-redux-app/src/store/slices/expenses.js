@@ -5,6 +5,9 @@ export const fetchExpenses = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch("http://localhost:3030/expenses");
+      if (!response.ok) {
+        return rejectWithValue("Unable to find expenses");
+      }
       const result = await response.json();
       return result; // Will populate action - payload
     } catch (err) {
