@@ -11,9 +11,12 @@ const resultSlice = createSlice({
     onStoreResult(state, action) {
       state.result.push(action.payload);
     },
+    onDeleteResult(state, action) {
+      state.result.splice(action.payload, 1);
+    },
   },
 });
 
 export const resultReducer = resultSlice.reducer;
 
-export const { onStoreResult } = resultSlice.actions;
+export const { onStoreResult, onDeleteResult } = resultSlice.actions;

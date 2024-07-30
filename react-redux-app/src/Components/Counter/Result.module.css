@@ -1,0 +1,7 @@
+.highlight {
+  transition: all 0.2s ease;
+}
+.highlight:hover {
+  cursor: pointer;
+  background-color: rgb(222, 206, 164);
+}

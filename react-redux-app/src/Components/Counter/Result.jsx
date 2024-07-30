@@ -1,11 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { onStoreResult } from "../../store/slices/result";
+import { onDeleteResult, onStoreResult } from "../../store/slices/result";
+import classes from "./Result.module.css";
 
 function Result() {
   const { counter } = useSelector((store) => store.ctr);
-
   const { result } = useSelector((store) => store.res);
-
   const dispatch = useDispatch();
 
   return (
@@ -21,7 +20,11 @@ function Result() {
         </div>
         <ul className="list-group">
           {result.map((res, i) => (
-            <li className="list-group-item mb-3" key={i}>
+            <li
+              onClick={() => dispatch(onDeleteResult(i))}
+              className={`list-group-item mb-3 ${classes["highlight"]}`}
+              key={i}
+            >
               {res}
             </li>
           ))}
